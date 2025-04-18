@@ -23,7 +23,7 @@ function Modal({ visible, onClose, children }) {
 
   return (
     <dialog ref={modalRef} id="my_modal_1" className="modal modal-middle" onCancel={handleESC}>
-      <div className="modal-box bg-transparent shadow-none overflow-hidden">
+      <div className="modal-box bg-transparent shadow-none overflow-auto">
         {children}
       </div>
     </dialog>

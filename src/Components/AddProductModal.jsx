@@ -24,7 +24,7 @@ const AddProductModal = ({ show, onClose }) => {
                     <button
                         onClick={onClose}
                         type='button'
-                        className='btn btn-outline'
+                        className='btn btn-outline btn-error hover:text-white'
                         disabled={isPending}
                     >
                         Cancel
@@ -32,7 +32,7 @@ const AddProductModal = ({ show, onClose }) => {
 
                     <button
                         type='submit'
-                        className='btn'
+                        className='btn bg-[#183B4E] text-white'
                         disabled={isPending}
                     >
                         {isPending ? 'Adding...' : 'Add'}

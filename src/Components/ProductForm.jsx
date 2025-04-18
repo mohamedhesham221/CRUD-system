@@ -29,8 +29,8 @@ const ProductForm = ({ children, submitFn, title, productData, isLoading = false
     }
     if (isLoading) return <LoadingSpinner />
     return (
-        <form className='bg-[#161c68] text-white py-6 px-6 rounded-md' onSubmit={handleFormSubmit}>
-            <h2 className="font-semibold mb-4 text-xl">{title}</h2>
+        <form className='bg-white text-[#183B4E] py-6 px-6 rounded-md' onSubmit={handleFormSubmit}>
+            <h2 className="font-semibold mb-4 text-xl ">{title}</h2>
             {error && (
                 <div>
                     <p className="bg-red-500 text-white font-semibold text-xl text-center rounded-md py-1 mb-4">
