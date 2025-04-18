@@ -46,3 +46,11 @@ export async function updateProduct({ id, ...data }) {
     console.log(error);
   }
 }
+
+export async function deleteProduct(id) {
+  try {
+    await axios.delete(`http://localhost:3000/products/${id}`);
+  } catch (error) {
+    console.log(error);
+  }
+}
