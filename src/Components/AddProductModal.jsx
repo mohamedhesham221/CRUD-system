@@ -4,12 +4,15 @@ import Modal from '../utils/Modal'
 import ProductForm from './ProductForm';
 import { useMutation } from '@tanstack/react-query';
 import { createNewProduct } from '../utils/http';
+import { queryClient } from '../main';
 
 const AddProductModal = ({ show, onClose }) => {
+
 
     const { mutate, isPending, error, isError } = useMutation({
         mutationFn: createNewProduct,
         onSuccess: () => {
+            queryClient.invalidateQueries(['products'])
             onClose(); // Close the modal on successful submission
         }
     })

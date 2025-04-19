@@ -29,7 +29,7 @@ const ProductForm = ({ children, submitFn, title, productData, isLoading = false
     }
     if (isLoading) return <LoadingSpinner />
     return (
-        <form className='bg-white text-[#183B4E] py-6 px-6 rounded-md' onSubmit={handleFormSubmit}>
+        <form className='bg-white text-[#183B4E] py-6  rounded-md' onSubmit={handleFormSubmit}>
             <h2 className="font-semibold mb-4 text-xl ">{title}</h2>
             {error && (
                 <div>
@@ -43,7 +43,7 @@ const ProductForm = ({ children, submitFn, title, productData, isLoading = false
             <Input defaultValue={productData?.category || ""} label="Category" id="category" type="text" />
 
             <Input defaultValue={productData?.description || ""} label="Description" id="description" istextArea />
-            
+
             <Input defaultValue={productData?.price || ""} label="Price" id="price" type="text" />
             <Input defaultValue={productData?.quantity || ""} label="Quantity" id="quantity" type="text" />
 

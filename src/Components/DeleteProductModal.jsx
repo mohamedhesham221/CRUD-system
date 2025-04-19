@@ -1,7 +1,20 @@
 import React from "react";
-import { deleteProduct } from "../utils/http";
 import deleteIcon from "../assets/close-icon.png";
+import { useMutation } from "@tanstack/react-query";
+import { deleteProduct } from "../utils/http";
+import { queryClient } from "../main";
+
+
 const DeleteProductModal = ({ productID }) => {
+	const { mutate } = useMutation({
+		mutationFn: deleteProduct,
+		onSuccess: () => {
+			queryClient.invalidateQueries(['products'])
+		}
+	})
+	function handleDeleteProduct(id) {
+		mutate(id)
+	}
 	return (
 		<dialog id="delete_modal" className="modal">
 			<div className="modal-box text-center">
@@ -21,7 +34,7 @@ const DeleteProductModal = ({ productID }) => {
 						<button className="btn btn-error text-white">Cancel</button>
 						<button
 							className="btn btn-warning text-white"
-							onClick={() => deleteProduct(productID)}
+							onClick={() => handleDeleteProduct(productID)}
 						>
 							Delete
 						</button>
