@@ -42,10 +42,9 @@ function App() {
 			</header>
 			<div className="divider mt-2"></div>
 			<main className="px-6 py-4 lg:px-44">
-				{/* <button className='btn' onClick={() => setShowEditModal((prev) => !prev)}>Edit modal</button> */}
-
+				
 				<AddProductModal show={showAddModal} onClose={handleCloseAdd} />
-				{/* <EditProductModal show={showEditModal} onClose={handleCloseEdit} /> */}
+				
 				<Products />
 			</main>
 		</>

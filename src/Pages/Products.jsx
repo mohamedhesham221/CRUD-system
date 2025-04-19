@@ -84,7 +84,7 @@ const Products = () => {
 					<tbody>
 						{data.length === 0 && (
 							<tr>
-								<td colSpan="5">No products Found</td>
+								<td colSpan="5" className="text-center text-3xl font-bold py-10">No products Found</td>
 							</tr>
 						)}
 						{data.map((product) => (
@@ -111,12 +111,12 @@ const Products = () => {
 										<button
 											className="btn btn-soft btn-error group"
 											onClick={() => {
-												document.getElementById("delete_modal").showModal() 
+												document.getElementById("delete_modal").showModal()
 												setDeletedProductID(product.id)
 											}
 											}
 										>
-											{" "}
+
 											<img
 												src={deleteIcon}
 												alt="Edit icon"
