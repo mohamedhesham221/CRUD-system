@@ -57,10 +57,18 @@ npm install
 3. **Run JSON Server to simulate your backend:**
 
 ```bash
+cd backend
+```
+
+```bash
 npx json-server --watch db.json --port 3000
 ```
 
 4. **Start the development server:**
+
+```bash
+cd frontend
+```
 
 ```bash
 npm run dev
