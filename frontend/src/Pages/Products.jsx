@@ -146,6 +146,9 @@ const Products = () => {
                           className="group-hover:brightness-200 transition-all duration-300 "
                         />
                       </button>
+                      <Link key={product.id} to={`/product/${product.id}`} className="btn btn-soft btn-warning group">
+												<img src={viewIcon} alt="View Icon" className="group-hover:brightness-500 transition-all duration-300"/>
+											</Link>
                     </div>
                   </td>
                 </tr>
