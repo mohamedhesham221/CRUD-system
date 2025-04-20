@@ -12,7 +12,7 @@ import deleteIcon from "../assets/delete-icon.png";
 import DeleteProductModal from "../Components/DeleteProductModal";
 
 const Products = () => {
-const [Price, setPrice] = useState("")
+  const [Price, setPrice] = useState("");
   const [search, setSearch] = useState("");
   const [showEditModal, setShowEditModal] = useState(false);
   const [editProductId, setEditProductId] = useState(null);
@@ -70,13 +70,13 @@ const [Price, setPrice] = useState("")
           defaultValue="Filter by"
           className="select rounded-full outline-none focus:outline-none focus:ring-0"
           value={Price}
-          onChange={(e)=>setPrice(e.target.value)}
+          onChange={(e) => setPrice(e.target.value)}
         >
-    <option value="">All Prices</option>
-  <option value="low">Less than $100</option>
-  <option value="mid">100 - 500</option>
-  <option value="high">More than $500</option>
-</select>
+          <option value="">All Prices</option>
+          <option value="low">Less than $100</option>
+          <option value="mid">100 - 500</option>
+          <option value="high">More than $500</option>
+        </select>
       </form>
       <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mt-5">
         <table className="table">
@@ -101,11 +101,13 @@ const [Price, setPrice] = useState("")
                 return product.name
                   .toLowerCase()
                   .includes(search.toLowerCase());
-              }).filter((product)=>{
-                if(Price ==="low") return product.price < 100
-                if(Price ==="mid") return product.price >= 100 && product.price <= 500
-                if(Price ==="high") return product.price > 500
-                return true
+              })
+              .filter((product) => {
+                if (Price === "low") return product.price < 100;
+                if (Price === "mid")
+                  return product.price >= 100 && product.price <= 500;
+                if (Price === "high") return product.price > 500;
+                return true;
               })
               .map((product) => (
                 <tr
