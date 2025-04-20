@@ -19,19 +19,21 @@ export async function createNewProduct(formData) {
 export async function fetchProducts() {
   try {
     const response = await axios.get("http://localhost:3000/products");
-    return response.data;
+  return response.data;
   } catch (error) {
     console.log(error);
+    
   }
 }
 
 export async function getProductById(id) {
   try {
     const response = await axios.get(`http://localhost:3000/products/${id}`);
-    console.log(response.data);
+
     return response.data;
   } catch (error) {
     console.log(error);
+    
   }
 }
 
@@ -44,6 +46,7 @@ export async function updateProduct({ id, ...data }) {
     return response.data;
   } catch (error) {
     console.log(error);
+    
   }
 }
 
@@ -52,5 +55,6 @@ export async function deleteProduct(id) {
     await axios.delete(`http://localhost:3000/products/${id}`);
   } catch (error) {
     console.log(error);
+    
   }
 }

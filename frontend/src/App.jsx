@@ -9,11 +9,11 @@ import Products from "./Pages/Products";
 import ProductInfo from "./Pages/ProductInfo";
 
 function App() {
-	const [showAddModal, setShowAddModal] = useState(false);
+  const [showAddModal, setShowAddModal] = useState(false);
 
-	function handleCloseAdd() {
-		setShowAddModal(false);
-	}
+  function handleCloseAdd() {
+    setShowAddModal(false);
+  }
 
 	return (
 		<>
@@ -55,6 +55,7 @@ function App() {
 			</main>
 		</>
 	);
+
 }
 
 export default App;
