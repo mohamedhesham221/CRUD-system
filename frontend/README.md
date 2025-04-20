@@ -44,8 +44,8 @@ Follow these steps to set up and run the project locally:
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/mohamedhesham221/CRUD-system
+cd crud-system
 ```
 
 2. **Install dependencies:**
@@ -71,14 +71,28 @@ npm run dev
 ## 📂 Project Structure
 
 ```
-src/
-├── api/            # Axios configurations and API request functions
-├── components/     # Reusable, self-contained UI components
-├── hooks/          # Custom hooks for data fetching and logic reuse
-├── pages/          # Application route views
-├── App.jsx         # Root component with routing structure
-├── main.jsx        # Application entry point and configuration
-└── index.css       # TailwindCSS base and custom styles
+crud-system/
+├── frontend/
+│   ├── node_modules
+│   ├── public
+│   ├── src/
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── utils
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── index.css
+│   │   └── main.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── eslint.config.js
+│   ├── vite.config.js
+│   ├── .gitignore
+│   └── README.md
+└── backend/
+    └── db.json
 ```
 
 ---

@@ -2,13 +2,15 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import LoadingSpinner from "../utils/LoadingSpinner";
 import Error from "../utils/Error";
 import EditProductModal from "../Components/EditProductModal";
 import { useQuery } from "@tanstack/react-query";
-import { fetchProducts, getProductById, deleteProduct } from "../utils/http";
+import { fetchProducts, getProductById } from "../utils/http";
 import updateIcon from "../assets/edit-icon.png";
 import deleteIcon from "../assets/delete-icon.png";
+import viewIcon from "../assets/view-icon.png";
 import DeleteProductModal from "../Components/DeleteProductModal";
 
 const Products = () => {
@@ -84,7 +86,12 @@ const Products = () => {
 					<tbody>
 						{data.length === 0 && (
 							<tr>
-								<td colSpan="5" className="text-center text-3xl font-bold py-10">No products Found</td>
+								<td
+									colSpan="5"
+									className="text-center text-3xl font-bold py-10"
+								>
+									No products Found
+								</td>
 							</tr>
 						)}
 						{data.map((product) => (
@@ -105,24 +112,25 @@ const Products = () => {
 											<img
 												src={updateIcon}
 												alt="Edit icon"
-												className="group-hover:brightness-200 transition-all duration-300 "
+												className="group-hover:brightness-500 transition-all duration-300 "
 											/>
 										</button>
 										<button
 											className="btn btn-soft btn-error group"
 											onClick={() => {
-												document.getElementById("delete_modal").showModal()
-												setDeletedProductID(product.id)
-											}
-											}
+												document.getElementById("delete_modal").showModal();
+												setDeletedProductID(product.id);
+											}}
 										>
-
 											<img
 												src={deleteIcon}
 												alt="Edit icon"
-												className="group-hover:brightness-200 transition-all duration-300 "
+												className="group-hover:brightness-500 transition-all duration-300 "
 											/>
 										</button>
+											<Link key={product.id} to={`/product/${product.id}`} className="btn btn-soft btn-warning group">
+												<img src={viewIcon} alt="View Icon" className="group-hover:brightness-500 transition-all duration-300"/>
+											</Link>
 									</div>
 								</td>
 							</tr>

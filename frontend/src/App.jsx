@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Modal from "./utils/Modal";
 import Input from "./utils/Input";
+import { Link, Routes, Route, } from "react-router-dom";
 import ProductForm from "./Components/ProductForm";
 import AddProductModal from "./Components/AddProductModal";
 import EditProductModal from "./Components/EditProductModal";
 import Products from "./Pages/Products";
+import ProductInfo from "./Pages/ProductInfo";
 
 function App() {
 	const [showAddModal, setShowAddModal] = useState(false);
@@ -16,9 +18,11 @@ function App() {
 	return (
 		<>
 			<header className="flex justify-between items-center px-5 lg:px-44 pt-4">
-				<h1 className="text-[#183B4E] text-2xl font-bold flex flex-col">
-					<span>CRUD APP</span>{" "}
-					<span className="italic text-xs">Products managment</span>
+				<h1 className="text-[#183B4E] text-2xl font-bold ">
+					<Link to="/" className="flex flex-col">
+						<span>CRUD APP</span>
+						<span className="italic text-xs">Products managment</span>
+					</Link>
 				</h1>
 				<div className="flex flex-col md:flex-row items-center gap-2">
 					<button
@@ -42,10 +46,12 @@ function App() {
 			</header>
 			<div className="divider mt-2"></div>
 			<main className="px-6 py-4 lg:px-44">
-				
 				<AddProductModal show={showAddModal} onClose={handleCloseAdd} />
-				
-				<Products />
+
+				<Routes>
+					<Route path="/" element={<Products />} />
+					<Route path="/product/:id" element={<ProductInfo />} />
+				</Routes>
 			</main>
 		</>
 	);
