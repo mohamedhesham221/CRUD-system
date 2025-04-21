@@ -47,9 +47,9 @@ const Products = () => {
 
   return (
     <section>
-      <form className="flex flex-col md:flex-row gap-3 justify-between items-center">
+      <form className="flex flex-col items-center justify-between gap-3 md:flex-row">
         {/* Search input */}
-        <label className="input rounded-full" style={{ outline: "none" }}>
+        <label className="rounded-full input" style={{ outline: "none" }}>
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ const Products = () => {
         </label>
         {/* Select filter */}
         <select
-          className="select rounded-full outline-none focus:outline-none focus:ring-0"
+          className="rounded-full outline-none select focus:outline-none focus:ring-0"
           value={Price}
           onChange={(e) => setPrice(e.target.value)}
         >
@@ -79,7 +79,7 @@ const Products = () => {
           <option value="high">More than $500</option>
         </select>
       </form>
-      <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mt-5">
+      <div className="mt-5 overflow-x-auto border rounded-box border-base-content/5 bg-base-100">
         <table className="table">
           <thead>
             <tr className="text-center bg-[#183B4E] text-white">
@@ -94,7 +94,7 @@ const Products = () => {
           <tbody>
             {data.length === 0 && (
               <tr>
-                <td colSpan="5" className="text-center font-bold text-4xl py-16">No products Found</td>
+                <td colSpan="5" className="py-16 text-4xl font-bold text-center">No products Found</td>
               </tr>
             )}
             {data
@@ -119,8 +119,8 @@ const Products = () => {
                   <td className="text-lg md:text-2xl">{product.category}</td>
                   <td className="text-lg md:text-2xl">{product.quantity}</td>
                   <td className="text-lg md:text-2xl">{product.price}</td>
-                  <td className="border-l-1 border-gray-100">
-                    <div className="flex gap-2 justify-center">
+                  <td className="border-gray-100 border-l-1">
+                    <div className="flex flex-wrap justify-center gap-2">
                       <button
                         className="btn btn-soft btn-info group"
                         onClick={() => handleEditData(product.id)}
@@ -128,7 +128,7 @@ const Products = () => {
                         <img
                           src={updateIcon}
                           alt="Edit icon"
-                          className="group-hover:brightness-200 transition-all duration-300 "
+                          className="transition-all duration-300 group-hover:brightness-200 "
                         />
                       </button>
                       <button
@@ -142,11 +142,11 @@ const Products = () => {
                         <img
                           src={deleteIcon}
                           alt="Edit icon"
-                          className="group-hover:brightness-200 transition-all duration-300 "
+                          className="transition-all duration-300 group-hover:brightness-200 "
                         />
                       </button>
                       <Link key={product.id} to={`/product/${product.id}`} className="btn btn-soft btn-warning group">
-                        <img src={viewIcon} alt="View Icon" className="group-hover:brightness-500 transition-all duration-300" />
+                        <img src={viewIcon} alt="View Icon" className="transition-all duration-300 group-hover:brightness-500" />
                       </Link>
                     </div>
                   </td>

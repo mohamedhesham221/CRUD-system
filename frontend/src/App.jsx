@@ -17,14 +17,14 @@ function App() {
 
 	return (
 		<>
-			<header className="flex justify-between items-center px-5 lg:px-44 pt-4">
+			<header className="flex items-center justify-between px-5 pt-4 lg:px-44">
 				<h1 className="text-[#183B4E] text-2xl font-bold ">
 					<Link to="/" className="flex flex-col">
 						<span>CRUD APP</span>
-						<span className="italic text-xs">Products managment</span>
+						<span className="text-xs italic">Products managment</span>
 					</Link>
 				</h1>
-				<div className="flex flex-col md:flex-row items-center gap-2">
+				<div className="flex flex-col items-center gap-2 md:flex-row">
 					<button
 						className="btn text-[#183B4E] bg-white"
 						onClick={() => setShowAddModal(true)}
@@ -44,7 +44,7 @@ function App() {
 					</button>
 				</div>
 			</header>
-			<div className="divider mt-2"></div>
+			<div className="mt-2 divider"></div>
 			<main className="px-6 py-4 lg:px-44">
 				<AddProductModal show={showAddModal} onClose={handleCloseAdd} />
 

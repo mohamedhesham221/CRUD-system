@@ -1,12 +1,36 @@
 {
   "products": [
     {
-      "name": "TV",
-      "category": "elecrtonics",
-      "description": "mohamed tharwat",
+      "name": "PixelNest Smart Lamp",
+      "category": "Home & Living",
+      "description": "A sleek, modern lamp with customizable RGB lighting and smart app control — perfect for creating cozy vibes or energizing workspaces.",
       "price": "200",
       "quantity": "2",
       "id": "aeeb"
+    },
+    {
+      "id": "9404",
+      "name": "HydroMate Water Bottle",
+      "category": " Health & Fitness",
+      "description": "Stay hydrated on the go with this leak-proof, BPA-free bottle featuring hourly time markers to track your daily water intake.",
+      "price": "600",
+      "quantity": "1"
+    },
+    {
+      "name": "EchoBuds Pro",
+      "category": " Electronics & Audio",
+      "description": "Wireless noise-canceling earbuds offering crystal-clear sound, long battery life, and seamless voice assistant integration.",
+      "price": "800",
+      "quantity": "1",
+      "id": "1db5"
+    },
+    {
+      "id": "00ce",
+      "name": "FlexiDesk Pro",
+      "category": " Office & Furniture",
+      "description": "An adjustable standing desk converter designed to improve posture, reduce back strain, and switch between sitting and standing in seconds.",
+      "price": "400",
+      "quantity": "1"
     }
   ]
 }
