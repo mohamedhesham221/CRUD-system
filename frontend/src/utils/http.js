@@ -4,7 +4,7 @@ import axios from "axios";
 export async function createNewProduct(formData) {
   try {
     const response = await axios.post(
-      "http://localhost:3000/products",
+      "https://crud-system-backend.vercel.app/products",
       formData
     );
     return response.data; // Return the created product
@@ -18,7 +18,7 @@ export async function createNewProduct(formData) {
 
 export async function fetchProducts() {
   try {
-    const response = await axios.get("http://localhost:3000/products");
+    const response = await axios.get("https://crud-system-backend.vercel.app/products");
   return response.data;
   } catch (error) {
     console.log(error);
@@ -28,7 +28,7 @@ export async function fetchProducts() {
 
 export async function getProductById(id) {
   try {
-    const response = await axios.get(`http://localhost:3000/products/${id}`);
+    const response = await axios.get(`https://crud-system-backend.vercel.app/products/${id}`);
 
     return response.data;
   } catch (error) {
@@ -40,7 +40,7 @@ export async function getProductById(id) {
 export async function updateProduct({ id, ...data }) {
   try {
     const response = await axios.put(
-      `http://localhost:3000/products/${id}`,
+      `https://crud-system-backend.vercel.app/products/${id}`,
       data
     );
     return response.data;
@@ -52,7 +52,7 @@ export async function updateProduct({ id, ...data }) {
 
 export async function deleteProduct(id) {
   try {
-    await axios.delete(`http://localhost:3000/products/${id}`);
+    await axios.delete(`https://crud-system-backend.vercel.app/products/${id}`);
   } catch (error) {
     console.log(error);
     
