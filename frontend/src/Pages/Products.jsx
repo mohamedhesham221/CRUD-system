@@ -69,7 +69,6 @@ const Products = () => {
         </label>
         {/* Select filter */}
         <select
-          defaultValue="Filter by"
           className="select rounded-full outline-none focus:outline-none focus:ring-0"
           value={Price}
           onChange={(e) => setPrice(e.target.value)}
@@ -95,7 +94,7 @@ const Products = () => {
           <tbody>
             {data.length === 0 && (
               <tr>
-                <td colSpan="5">No products Found</td>
+                <td colSpan="5" className="text-center font-bold text-4xl py-16">No products Found</td>
               </tr>
             )}
             {data
@@ -139,7 +138,7 @@ const Products = () => {
                           setDeletedProductID(product.id);
                         }}
                       >
-                        {" "}
+
                         <img
                           src={deleteIcon}
                           alt="Edit icon"
@@ -147,8 +146,8 @@ const Products = () => {
                         />
                       </button>
                       <Link key={product.id} to={`/product/${product.id}`} className="btn btn-soft btn-warning group">
-												<img src={viewIcon} alt="View Icon" className="group-hover:brightness-500 transition-all duration-300"/>
-											</Link>
+                        <img src={viewIcon} alt="View Icon" className="group-hover:brightness-500 transition-all duration-300" />
+                      </Link>
                     </div>
                   </td>
                 </tr>

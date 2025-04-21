@@ -5,6 +5,7 @@ import Modal from "../utils/Modal";
 import ProductForm from "./ProductForm";
 import { useMutation } from "@tanstack/react-query";
 import { createNewProduct } from "../utils/http";
+import { queryClient } from "../main";
 // =======
 // import React from 'react'
 // import Modal from '../utils/Modal'
@@ -19,6 +20,7 @@ const AddProductModal = ({ show, onClose }) => {
     mutationFn: createNewProduct,
     onSuccess: () => {
       onClose(); // Close the modal on successful submission
+      queryClient.invalidateQueries(['products'])
     },
   });
   function handleAddRequest(formData) {
