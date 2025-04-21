@@ -23,7 +23,7 @@ const ProductInfo = () => {
 
 	return (
 		<div className="flex justify-center items-center min-h-[70vh] text-[#183B4E]">
-			<div className="card card-side bg-base-100 shadow-sm  w-[700px]">
+			<div className="card flex-col md:flex-row card-side bg-base-100 shadow-sm  w-[700px]">
 				<div className="card-body md:w-1/2 gap-4 lg:gap-8">
 					<h1 className="card-title md:text-6xl">{data.name}</h1>
 					<p className="flex flex-col md:text-2xl">
@@ -42,7 +42,7 @@ const ProductInfo = () => {
 					</div>
 				</div>
 				<div className="card-body md:w-1/2">
-					<p className="md:text-xl break-all">{data.description}</p>
+					<p className="md:text-xl break-words">{data.description}</p>
 				</div>
 			</div>
 		</div>
