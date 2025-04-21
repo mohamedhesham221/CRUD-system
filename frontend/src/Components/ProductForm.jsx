@@ -59,12 +59,6 @@ const ProductForm = ({
         type="text"
       />
 
-            <Input defaultValue={productData?.description || ""} label="Description" id="description" istextArea />
-
-            <Input defaultValue={productData?.price || ""} label="Price" id="price" type="text" />
-            <Input defaultValue={productData?.quantity || ""} label="Quantity" id="quantity" type="text" />
-
-
       <Input
         defaultValue={productData?.description || ""}
         label="Description"

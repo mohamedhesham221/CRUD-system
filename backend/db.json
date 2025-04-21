@@ -1,20 +1,12 @@
 {
   "products": [
     {
-      "name": "Apple iMac 25\"",
+      "name": "TV",
       "category": "elecrtonics",
-      "description": "Standard glass ,3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.",
-      "price": "2999",
-      "quantity": "10",
-      "id": "4b6a"
-    },
-    {
-      "name": "BMW M3",
-      "category": "Car",
-      "description": "The BMW M3 is a high-performance version of the BMW 3 Series, developed by BMW's in-house motorsport division, BMW M GmbH. M3 models have been produced for every generation of 3 Series since the E30 M3 was introduced in 1986.",
-      "price": "64,995",
+      "description": "mohamed tharwat",
+      "price": "200",
       "quantity": "2",
-      "id": "5972"
+      "id": "aeeb"
     }
   ]
 }
